@@ -39,6 +39,12 @@ class HomeController extends Controller
 
         error_log($person_1 . " " . $person_2 . " " . $percentage);
 
+        
+         if(($persoon_1 == "affie" && $persoon_2 == "jasmijn") || ($persoon_1 == "jasmijn" && $persoon_2 == "affie"))
+        {
+            $percentage = 100;
+        }
+        
         return view("points", [
             "person1" => $person_1,
             "person2" => $person_2,
